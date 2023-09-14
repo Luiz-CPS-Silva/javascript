@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Controle de Nacionalidade</h1>
+    Digite o país de origem <input type="text" name="txtna" id="txtnac">
+    <input type="button" value="verificar" onclick="confirmar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function confirmar() {
+            var txtn = window.document.querySelector('input#txtnac')
+            var res = window.document.querySelector('div#res')
+            var país = (txtn.value)
+            if (país == 'Brasil') {
+                res.innerHTML = `<p>Você é <strong>brasilieiro!</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você é <strong>estrangeiro!</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
